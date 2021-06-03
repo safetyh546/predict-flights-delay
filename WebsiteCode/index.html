@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FlightDelays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Home
+          </a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href = "Visual1.html"> Machine Learning</a>
+        </li>
+        <li>
+          <a href = "Visual2.html"> Tableau Visuals</a>
+        </li>
+        <li>
+          <a href = "Visual3.html"> Link 3</a>
+        </li>
+        <li>
+          <a href = "DataPage.html"> Data Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero text-center">
+      <h1>US Delayed Flights</h1>
+      <p>Predict if your flight will be delayed</p>
+    </div>
+
+    <!-- <div class="row">
+      <div class="column">
+        <img title='Vis1' src="linechart.png" alt="Line Chart" style="width:100%">
+        <figcaption style="text-align:center"> Visual 1 - Sales by Month</figcaption>
+      </div>
+      <div class="column">
+        <img title='Vis2' src="bargraph.png" alt="Bar Graph" style="width:100%">
+        <figcaption style="text-align:center"> Visual 2 - Sales by Borough</figcaption>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column2">
+        <img title='Vis3' src="bubblechart.png" alt="Bubble Chart" style="width:50%" class="center3">
+        <figcaption style="text-align:center"> Visual 3 - Average Price per Square Foot</figcaption>
+
+      </div>
+    </div> -->
+
+
+    <div>
+      <h1 style="text-align:center">The data originally came from the Kaggle website which has a concatenated and cleaned-up 
+        version of the New York City Department of Finance’s Rolling Sales dataset. It contains delayed flight data
+        for the months of January in 2019 and 2020. The data has over 400 thousand rows. We limited our 
+        analysis to only the average real estate sale price range of $500,000-$800,000. The resulting data in 
+        that price range had several rows where the square feet listed was 0 or not provided. 
+        We excluded such rows when looking at the price per square feet analysis.</h1>
+    </div>
+
+
+    <footer class="footer">
+      <span class="bottom">Magnificent 3</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
