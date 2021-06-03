@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FlightDelay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{ url_for('Index') }}">Home
+          </a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href = "{{ url_for('Model') }}"> Model</a>
+        </li>
+
+      </ul>
+    </nav>
+    <div class="text-left">
+      <h1>{{ prediction }}</h1>
+    </div>
+    
+    <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well">
+          <h5>Airline <br /> (Choose one):</h2>
+          <select id="selDataset" onchange="optionChanged(this.value)">
+
+          
+          </select>
+          <h5>Departure Time <br /> (Use military time like 1900):</h2>
+          <select id="selDataset2" onchange="optionChanged(this.value)">
+
+            
+            </select>
+
+          </div>
+        </div>
+      </div> -->
+ 
+
+
+</body>
+
+
+  
+
+
+    <footer class="footer">
+      <span class="bottom">Magnificent 3</span>
+    </footer>
+  </div>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+
+
+</html>

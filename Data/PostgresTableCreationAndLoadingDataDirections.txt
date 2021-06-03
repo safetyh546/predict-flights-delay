@@ -1,0 +1,9 @@
+Data directions
+1) Create db in postgres db called "flight_db"
+2) Run create table script 01_CreateTables.sql
+3) Through PGAdmin import, Import Airlines.csv into airline table
+4) Through PGAdmin import, Import AirportsWikipedia.csv into airport table
+5) Through PGAdmin import, Import Jan_2019_ontime.csv to flight_stage table
+6) Open script 02_02_InsertIntoFinalFlightTableAfterManualCSVImport.sql and make sure Year is 2019.  then run insert into Flight table
+7) run command "truncate table flight_stage" and then import Jan_2020_ontime.csv  into flight_stage
+8) Open script 02_02_InsertIntoFinalFlightTableAfterManualCSVImport.sql and make sure Year is 2020.  then run insert into Flight table
