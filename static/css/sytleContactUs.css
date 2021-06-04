@@ -109,22 +109,13 @@ a:hover{
   height: 500px;
 }
 
-/* .center3 {
+.center3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 250px;
   height: 250px;
-} */
-.center4 {
-  display: block;
-  margin-left: 2px;
-  margin-right: 2px;
-  width: 500px;
-  height: 500px;
-  height: 500px;
 }
-
 
 a{
   text-decoration:none;

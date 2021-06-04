@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ContactUs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href = "{{ url_for('Index') }}"> Home</a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href = "{{ url_for('Model') }}"> Machine Learning</a>
+        </li>
+        <li>
+          <a href = "{{ url_for('Tableau') }}"> Tableau Visuals</a>
+        </li>
+        <li>
+          <a href = "{{ url_for('Map') }}"> Airport Map</a>
+        </li>
+        <li>
+          <a href = "{{ url_for('DataPage') }}"> Data Source</a>
+        </li>
+        <li>
+          <a href = "{{ url_for('ContactUs') }}"> Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- <div class="hero text-center">
+      <h1>US Delayed Flights</h1>
+      <p>Predict if your flight will be delayed</p>
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-4 mx-auto" >   
+
+
+            <h2 style="text-align:Left"> Maxbooz Homidas</h2>
+            <img src="../static/images/max picture.png" alt="Maxbooz Image" width="400" height="400" >
+            <p>
+            <a href="https://www.linkedin.com/in/maxbooz-h-b47a2a187/"   target='_blank'> Link to LinkedIn</a>
+           </p>
+
+      </div>
+      <div class="col-md-4"   >  
+     
+
+          <h2 style="text-align:Left"> Isaiah Peek</h2>
+          <img src="../static/images/Isaiah picture.png" alt="Isaiah Image" width="400" height="400" >
+          <p>
+          <a  href="https://www.linkedin.com/in/ipeek/" target='_blank'> Link to LinkedIn</a>
+        </p>
+      </div>
+      <div class="col-md-4" >
+
+
+          <h2 style="text-align:Left"> Juan Rodriguez</h2>
+          <img src="../static/images/Juan picture.png" alt="Juan Image" width="400" height="400" >
+          <p>
+          <a href="https://www.linkedin.com/in/juanmrodriguez1/" target='_blank'> Link to LinkedIn</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- <div>
+      <h2 style="text-align:center"> Maxbooz Homidas</h2>
+      <img src="../static/images/max picture.png" alt="Maxbooz Image" width="75" height="75" class='center3'>
+      <p style="text-align:center"> LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/maxbooz-h-b47a2a187/" target='_blank'> Link to LinkedIn</a>
+  </div>
+
+  <div>
+    <h2 style="text-align:center"> Isaiah Peek</h2>
+    <img src="../static/images/Isaiah picture.png" alt="Isaiah Image" width="75" height="75" class='center3'>
+    <p style="text-align:center"> LinkedIn:</p>
+    <a style="text-align:center" href="https://www.linkedin.com/in/ipeek/" target='_blank'> Link to LinkedIn</a>
+</div>
+
+<div>
+  <h2 style="text-align:center"> Juan Rodriguez</h2>
+  <img src="../static/images/Juan picture.png" alt="Juan Image" width="75" height="75" class='center3'>
+  <p style="text-align:center"> LinkedIn:</p>
+  <a href="https://www.linkedin.com/in/juanmrodriguez1/" target='_blank'> Link to LinkedIn</a>
+</div> -->
+
+
+
+    <footer class="footer">
+      <span class="bottom">Magnificent 3</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+
+</body>
+
+</html>

@@ -64,6 +64,10 @@ def DataPage():
 def Map():
     return render_template("Map.html")
 
+@app.route("/ContactUs")
+def ContactUs():
+    return render_template("contactus.html")
+    
 #, methods=['POST']
 @app.route("/Results" )
 def Results():
