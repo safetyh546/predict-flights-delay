@@ -16,15 +16,22 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="{{ url_for('Index') }}">Home
-          </a>
+          <a href = "{{ url_for('Index') }}"> Home</a>
         </div>
       </div>
       <ul>
         <li>
-          <a href = "{{ url_for('Model') }}"> Model</a>
+          <a href = "{{ url_for('Model') }}"> Machine Learning</a>
         </li>
-
+        <li>
+          <a href = "{{ url_for('Tableau') }}"> Tableau Visuals</a>
+        </li>
+        <li>
+          <a href = "{{ url_for('Map') }}"> Airport Map</a>
+        </li>
+        <li>
+          <a href = "{{ url_for('DataPage') }}"> Data Source</a>
+        </li>
       </ul>
     </nav>
     <div class="text-left">

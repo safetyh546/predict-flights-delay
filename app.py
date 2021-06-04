@@ -52,6 +52,17 @@ def Model():
 def Model2():
     return render_template("Model2.html")
 
+@app.route("/Tableau")
+def Tableau():
+    return render_template("Tableau.html")
+
+@app.route("/DataPage")
+def DataPage():
+    return render_template("DataPage.html")
+
+@app.route("/Map")
+def Map():
+    return render_template("Map.html")
 
 #, methods=['POST']
 @app.route("/Results" )
