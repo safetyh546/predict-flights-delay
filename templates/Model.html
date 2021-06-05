@@ -21,13 +21,10 @@
       </div>
       <ul>
         <li>
-          <a href = "{{ url_for('Model') }}"> Machine Learning</a>
-        </li>
-        <li>
           <a href = "{{ url_for('Tableau') }}"> Tableau Visuals</a>
         </li>
         <li>
-          <a href = "{{ url_for('Map') }}"> Airport Map</a>
+          <a href = "{{ url_for('Model') }}"> Machine Learning</a>
         </li>
         <li>
           <a href = "{{ url_for('DataPage') }}"> Data Source</a>
@@ -35,35 +32,19 @@
         <li>
           <a href = "{{ url_for('ContactUs') }}"> Contact Us</a>
         </li>
+
+
       </ul>
     </nav>
-    <div class=" text-center">
-      <h1>Flight Prediction</h1>
-      <p>Flight Delay</p>
+    <div class=" text-Left">
+      <h1>Flight Delay Predictor</h1>
+      <p>Enter the inputs to see if you're likely to be delayed</p>
     </div>
     
-    <!-- <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="well">
-          <h5>Airline <br /> (Choose one):</h2>
-          <select id="selDataset" onchange="optionChanged(this.value)">
-
-          
-          </select>
-          <h5>Departure Time <br /> (Use military time like 1900):</h2>
-          <select id="selDataset2" onchange="optionChanged(this.value)">
-
-            
-            </select>
-
-          </div>
-        </div>
-      </div> -->
  
       <div class="container">
       <div class="row"> 
-                <div class="col-md-8">
+                <div class="col-md-10">
                   <!-- <aside class="filters"> -->
                     <div class="panel panel-default">
                       <div class="panel-heading">Enter Model inputs</div>
@@ -71,48 +52,35 @@
             <form class="form-horizontal" action="/Results" method="POST" >
               <div class="form-group">
                 <ul class="list-group" id="filters">
+
                   <li class="filter list-group-item">
                     <label for="Airline">Enter an Airline</label>
                     <select class="form-control" id="selDataset" onchange="optionChanged(this.value)" type="text">
-
-            
                     </select>
-                    <!-- <input class="form-control" id="selDataset" onchange="optionChanged(this.value)" type="text" placeholder="American"> -->
                   </li>
+
                   <li class="filter list-group-item">
-                    <label for="Time">Enter a Departure Time in Miliatry Time</label>
-                    <input class="form-control" id="DepartureTime" type="text" placeholder="1900">
-                  </li>                      
-                  <!-- <li class="filter list-group-item">
-                    <label for="state">Enter a State</label>
-                    <input class="form-control" id="state" type="text" placeholder="ca">
-                  </li>
+                    <label for="Origin Airport">Enter the 3 character Airport Code</label>
+                    <input class="form-control" id="OriginAirport" type="text" placeholder="ATL">
+                  </li>     
+                  
                   <li class="filter list-group-item">
-                    <label for="country">Enter a Country</label>
-                    <input class="form-control" id="country" type="text" placeholder="us">
-                  </li>   
-                  <li class="filter list-group-item">
-                    <label for="shape">Enter a Shape</label>
-                    <input class="form-control" id="shape" type="text" placeholder="circle">
-                  </li>                     -->
+                    <label for="Destination Airport">Enter the 3 character Airport Code</label>
+                    <input class="form-control" id="DestinationAirport" type="text" placeholder="SFO">
+                  </li> 
+
                 </ul>
               </div>
               <button  id="filter-btn" type="button" class="btn btn-default">Submit</button>
             </form>
           </div>
         </div>
-      <!-- </aside> -->
-          </div>
-        </div>
+
       </div>
-    
- 
-  <div class="row">
-    <div class="col-md-12">
-      <div id="plot"></div>
     </div>
   </div>
-
+    
+ 
 
 </body>
 

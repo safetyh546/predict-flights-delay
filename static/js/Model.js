@@ -41,14 +41,17 @@ function runEnter() {
 
   // Select the input element and get the raw HTML node
   var inputElementAirline = d3.select("#selDataset");
-  var inputElementTime = d3.select("#DepartureTime");
+  var inputElementOriginAirport = d3.select("#OriginAirport");
+  var inputElementDestinationAirport = d3.select("#DestinationAirport");
 
   // Get the value property of the input element
   var inputValueAirline = inputElementAirline.property("value");
-  var inputValueTime = inputElementTime.property("value");
+  var inputValueOriginAirport = inputElementOriginAirport.property("value");
+  var inputValueDestinationAirport = inputElementDestinationAirport.property("value");
 
   console.log('airline selected in form='+inputValueAirline)
-  console.log('time selected in form='+inputValueTime)
+  console.log('OriginAirport selected in form='+inputValueOriginAirport)
+  console.log('DestAirport selected in form='+inputValueDestinationAirport)
 
 
 }

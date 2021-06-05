@@ -31,6 +31,7 @@ Base.prepare(engine, reflect=True)
 
 # Save references to each table
 flight = Base.classes.flight
+airport = Base.classes.airport_top30
 #top_tags = Base.classes.top_tags
 
 #################################################
@@ -55,6 +56,10 @@ def Model2():
 @app.route("/Tableau")
 def Tableau():
     return render_template("Tableau.html")
+
+@app.route("/Tableau2")
+def Tableau2():
+    return render_template("Tableau2.html")
 
 @app.route("/DataPage")
 def DataPage():
@@ -84,6 +89,8 @@ def Results():
              ) 
 
 
+
+
 @app.route("/Flights/<Year>")
 def Flights(Year):
     session = Session(engine)
@@ -111,6 +118,17 @@ def Airlines():
     session.close()  
     return jsonify(Airline_Dict_list)
 
+@app.route("/AirportDropDown")
+def AirportDropDown():
+    session = Session(engine)
+    AP = session.query(airport.iata+"-"+airport.airport).order_by(airport.iata+"-"+airport.airport).all()
+    AP_list = []
+    for r in AP:
+        AP_list.append(r[0])
+    session.close()  
+
+    return jsonify(AP_list)
+
 @app.route("/AirlineDropDown")
 def AirlineDropDown():
     session = Session(engine)
@@ -122,22 +140,45 @@ def AirlineDropDown():
 
     return jsonify(AL_list)
 
-@app.route('/results/<Airline>/<Time>') 
-def results(Airline,Time): 
-    """Renders the result  page."""
-    random_bit = random.getrandbits(1) 
 
-    if int(random_bit)== 1: 
-        prediction ='you are likely to be delayed'
-    else: 
-        prediction ='You should be all good'
-    return prediction               
-    # return render_template("results.html",
+
+# @app.route('/results/<Airline>/<Time>') 
+# def results(Airline,Time): 
+#     """Renders the result  page."""
+#     random_bit = random.getrandbits(1) 
+
+#     if int(random_bit)== 1: 
+#         prediction ='you are likely to be delayed'
+#     else: 
+#         prediction ='You should be all good'
+#     return prediction               
+#     # return render_template("results.html",
             
-    #          prediction = prediction
-    #          ) 
+#     #          prediction = prediction
+#     #          ) 
+
+# @app.route('/Results', methods=['GET', 'POST'])
+# def Results():
+#     random_bit = random.getrandbits(1) 
+#     Airline = 'Southwest Airline'
+#     Origin = 'ATL'
+#     Destination = 'DFW'
 
 
+#     if Flask.request.method == 'GET':
+#         return(Flask.render_template('Model.html'))
+#     if Flask.request.method == 'POST':
+#         if int(random_bit)== 1: 
+#             prediction ='you are likely to be delayed'
+#         else:
+#             prediction ='You should be all good'
+#             return jsonify(Airline)
+#         # return Flask.render_template('Model.html',
+#         #                              original_input={'Airline':Airline,
+#         #                                              'Origin Airport':Origin,
+#         #                                              'Destination Airport':Destination},
+#         #                              result=prediction,
+#         #                              )
 
 if __name__ == "__main__":
     app.run(debug=True)        

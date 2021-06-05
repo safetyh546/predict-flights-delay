@@ -20,13 +20,10 @@
       </div>
       <ul>
         <li>
-          <a href = "{{ url_for('Model') }}"> Machine Learning</a>
-        </li>
-        <li>
           <a href = "{{ url_for('Tableau') }}"> Tableau Visuals</a>
         </li>
         <li>
-          <a href = "{{ url_for('Map') }}"> Airport Map</a>
+          <a href = "{{ url_for('Model') }}"> Machine Learning</a>
         </li>
         <li>
           <a href = "{{ url_for('DataPage') }}"> Data Source</a>
@@ -34,6 +31,8 @@
         <li>
           <a href = "{{ url_for('ContactUs') }}"> Contact Us</a>
         </li>
+
+
       </ul>
     </nav>
     <div class="hero text-center">
@@ -41,33 +40,41 @@
       <p>Predict if your flight will be delayed</p>
     </div>
 
-    <!-- <div class="row">
-      <div class="column">
-        <img title='Vis1' src="linechart.png" alt="Line Chart" style="width:100%">
-        <figcaption style="text-align:center"> Visual 1 - Sales by Month</figcaption>
-      </div>
-      <div class="column">
-        <img title='Vis2' src="bargraph.png" alt="Bar Graph" style="width:100%">
-        <figcaption style="text-align:center"> Visual 2 - Sales by Borough</figcaption>
+
+    <div class="container">
+      
+      <div class="row">
+      <div class="col-md-12  ">
+        
+        <p class="text-center "> The data for this site originally came from the Kaggle website which has a cleaned-up 
+        version of the Bureau of Transportation Statistics, Govt. of the USA dataset. It contains delayed flight data
+        for the months of January in 2019 and 2020. The data has information on over 580 thousand US flights per year. The Delay indicators in the dataset
+        indicate delay of 15 minutes or more. There is a delay indicator for both departure and arrival.  When reporting percent delays, we excluded
+        where these delay indicators were blank which is the case for the cancelled and diverted flights.  Airport charts are also limited to the
+        top 30 busiest airports.
+       </p>
       </div>
     </div>
 
+  </div>
+  
     <div class="row">
-      <div class="column2">
-        <img title='Vis3' src="bubblechart.png" alt="Bubble Chart" style="width:50%" class="center3">
-        <figcaption style="text-align:center"> Visual 3 - Average Price per Square Foot</figcaption>
+      
+      <div class="col-md-6 ">
+        <h2 class="text-left ">January 2019</h2>
+        <div class='tableauPlaceholder' id='viz1622838318988' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectPercentDelay2019&#47;AirlineArrivalDelay&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FinalProjectPercentDelay2019&#47;AirlineArrivalDelay' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectPercentDelay2019&#47;AirlineArrivalDelay&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1622838318988');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
-      </div>
-    </div> -->
-
-
-        <div>
-          <h1 style="text-align:center">The data visualized in this site originally came from the Kaggle website originally sourced from the Bureau of Transportation Statistics, Govt. of the USA.
-            This data has over 500k flights in January 2019 and over 600k flights in January 2020. The data has a delay indicator for arrival and departure.  
-            The departure indicator tells you if the flight departed late by 15 minutes or more.  The arrival indicator tells you if the flight arrived late by 15 minutes or more.
-            There are also indicators for Cancelled and Diverted flights.  Cancelled/Diverted flights do not have an arrival delay indicator and were excluded from charts showing arrival delay details.
-          </h1>
+        
         </div>
+
+
+        <div class="col-md-6 ">
+          <h2 class="text-left ">January 2020</h2>
+          <div class='tableauPlaceholder' id='viz1622841157772' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectPercentDelay2020&#47;AirlineArrivalDelay&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FinalProjectPercentDelay2020&#47;AirlineArrivalDelay' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectPercentDelay2020&#47;AirlineArrivalDelay&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1622841157772');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          
+          </div>
+      </div>
+   
 
 
     <footer class="footer">
