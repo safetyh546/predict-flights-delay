@@ -1,0 +1,31 @@
+iata,icao,airport,location,timezone,season,Lat,Lng
+ATL,KATL,Hartsfield–Jackson Atlanta International Airport,"Atlanta, Georgia, United States",UTC-05:00,Mar-Nov,33.6407282,-84.4277001
+ORD,KORD,O'Hare International Airport,"Chicago, Illinois, United States",,,41.98028,-87.9089979
+DFW,KDFW,Dallas/Fort Worth International Airport,"Dallas / Fort Worth, Texas, United States",UTC-06:00,Mar-Nov,32.8998091,-97.0403352
+CLT,KCLT,Charlotte Douglas International Airport,"Charlotte, North Carolina, United States",UTC-05:00,Mar–Nov,35.2144026,-80.9473146
+DEN,KDEN,Denver International Airport,"Denver, Colorado, United States",UTC-07:00,Mar-Nov,39.8560963,-104.6737376
+LAX,KLAX,Los Angeles International Airport,"Los Angeles, California, United States",UTC-08:00,Mar-Nov,33.9415889,-118.40853
+PHX,KPHX,Phoenix Sky Harbor International Airport,"Phoenix, Arizona, United States",,,33.4372686,-112.0077881
+IAH,KIAH,George Bush Intercontinental Airport,"Houston, Texas, United States",UTC-06:00,Mar-Nov,29.9902199,-95.3367827
+LGA,KLGA,LaGuardia Airport,"New York City, New York, United States",UTC-05:00,Mar-Nov,40.7769271,-73.8739659
+LAS,KLAS,McCarran International Airport,"Las Vegas, Nevada, United States",UTC-08:00,Mar-Nov,36.0839998,-115.1537389
+SFO,KSFO,San Francisco International Airport,"San Francisco, California, United States",,,37.6213129,-122.3789554
+DTW,KDTW,Detroit Metropolitan Wayne County Airport,"Detroit, Michigan, United States",UTC-05:00,Mar-Nov,42.2162491,-83.3553642
+MCO,KMCO,Orlando International Airport,"Orlando, Florida, United States",UTC-05:00,Mar-Nov,28.4311577,-81.308083
+MSP,KMSP,Minneapolis–Saint Paul International Airport (Wold–Chamberlain Field),"Minneapolis / St Paul, Minnesota, United States",UTC-06:00,Mar-Nov,44.8847554,-93.2222846
+BOS,KBOS,Logan International Airport,"Boston, Massachusetts, United States",UTC-05:00,Mar-Nov,42.3656132,-71.0095602
+DCA,KDCA,Ronald Reagan Washington National Airport,"Arlington County (near Washington, D.C.), Virginia, United States",UTC-05:00,Mar-Nov,38.851242,-77.0402315
+EWR,KEWR,Newark Liberty International Airport,"Newark, New Jersey, United States",UTC-05:00,Mar-Nov,40.6895314,-74.1744624
+SEA,KSEA,Seattle–Tacoma International Airport,"Seattle, Washington, United States",,,47.4502499,-122.3088165
+JFK,KJFK,John F. Kennedy International Airport,"New York City, New York, United States",UTC-05:00,Mar-Nov,40.6413111,-73.7781391
+SLC,KSLC,Salt Lake City International Airport,"Salt Lake City, Utah, United States",,,40.7899404,-111.9790706
+FLL,KFLL,Fort Lauderdale–Hollywood International Airport,"Fort Lauderdale / Hollywood, Florida, United States",UTC-05:00,Mar-Nov,26.0742344,-80.1506022
+PHL,KPHL,Philadelphia International Airport,"Philadelphia, Pennsylvania, United States",,,39.8729299,-75.2436673
+MIA,KMIA,Miami International Airport,"Miami, Florida, United States",UTC-05:00,Mar-Nov,25.7958723,-80.2870509
+BWI,KBWI,Baltimore/Washington International Thurgood Marshall Airport,"Baltimore–Washington metropolitan area, United States",UTC-05:00,Mar-Nov,39.1774042,-76.6683922
+SAN,KSAN,San Diego International Airport,"San Diego, California, United States",,,32.7338006,-117.1933038
+TPA,KTPA,Tampa International Airport,"Tampa, Florida, United States",,,27.9771524,-82.5311382
+BNA,KBNA,Nashville International Airport,"Nashville, Tennessee, United States",UTC-06:00,Mar-Nov,36.126317,-86.6773713
+MDW,KMDW,Midway International Airport,"Chicago, Illinois, United States",UTC-06:00,Mar-Nov,41.7867759,-87.7521884
+DAL,KDAL,Dallas Love Field,"Dallas, Texas, United States",UTC-06:00,Mar-Nov,32.8481029,-96.8512063
+STL,KSTL,Lambert–St. Louis International Airport,"St. Louis, Missouri, United States",,,38.7499403,-90.374819

@@ -56,7 +56,5 @@ function runEnter() {
   var Route = inputValueAirline+"/"+inputValueOriginAirport+"/"+inputValueDestinationAirport
   console.log('Route='+Route)
 
-  
-
 
 }

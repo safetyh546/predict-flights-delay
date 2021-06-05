@@ -53,10 +53,31 @@ function runEnter() {
   console.log('OriginAirport selected in form='+inputValueOriginAirport)
   console.log('DestAirport selected in form='+inputValueDestinationAirport)
 
-  var Route = inputValueAirline+"/"+inputValueOriginAirport+"/"+inputValueDestinationAirport
+  var Route = "/Predict/"+inputValueAirline+"/"+inputValueOriginAirport+"/"+inputValueDestinationAirport
   console.log('Route='+Route)
 
-  
+
+  d3.json(Route).then((importedData) => {
+    console.log(importedData)
+
+    ParseData = importedData 
+    // JSON.parse(importedData)
+
+    console.log(ParseData)
+
+    ParseData.forEach(function (ParseData) {
+      console.log(ParseData);
+      var row = tbody.append("tr");
+      Object.entries(ParseData).forEach(function ([key, value]) {
+        var cell = row.append("td");
+        cell.text(value);
+      });
+    });
+
+  });
+
+
+
 
 
 }

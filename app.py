@@ -31,7 +31,7 @@ Base.prepare(engine, reflect=True)
 
 # Save references to each table
 flight = Base.classes.flight
-airport = Base.classes.airport_top30
+airport = Base.classes.airport_top30_coord
 #top_tags = Base.classes.top_tags
 
 #################################################
@@ -140,6 +140,46 @@ def AirlineDropDown():
 
     return jsonify(AL_list)
 
+@app.route("/AirportMap")
+def AirportMap():
+    session = Session(engine)
+    Airport = session.query(flight.origin_airport,airport.lat, airport.lng, func.count(flight.flightid),func.sum(flight.arr_del15)).join(airport, airport.iata == flight.origin).filter(flight.year == 2019).filter(flight.cancelled == 0).filter(flight.diverted == 0).group_by(flight.origin_airport,airport.lat, airport.lng).order_by(flight.origin_airport).all()
+    #session.query(quote.quote, quote.quote_id).join(tag, tag.quote_id == quote.quote_id).filter(tag.tag == tagvalue).all()
+    AirportMap_Dict_list = []
+    for f,lat,lng,ct,s in Airport:
+        AirportMapDict = {}
+        AirportMapDict["Airport"] = f
+        AirportMapDict["Lat"] = round(float(lat),2)
+        AirportMapDict["Lng"] = round(float(lng),2)
+        AirportMapDict["2019FlightCount"] = ct
+        AirportMapDict["2019PercentArrivalDelay"] = round(float(s/ct)*100,2)
+        AirportMap_Dict_list.append(AirportMapDict)
+    session.close()  
+    return jsonify(AirportMap_Dict_list)
+
+
+
+@app.route("/Predict/<Airline>/<Origin>/<Dest>")
+def Predict(Airline,Origin,Dest):
+    session = Session(engine)
+    random_bit = random.getrandbits(1) 
+    if int(random_bit)== 1: 
+        prediction ='Uhoh, you are going to be late'
+    else: 
+        prediction ='You should be all good'
+    
+    PredictDictList = []
+    PredictDict = {}
+    PredictDict["Airline"] = Airline
+    PredictDict["DepartureAirport"] = Origin
+    PredictDict["DestinationAirport"] = Dest
+    PredictDict["DelayPrediction"] = prediction
+
+    PredictDictList.append(PredictDict)
+
+    session.close()  
+
+    return jsonify(PredictDictList)
 
 
 # @app.route('/results/<Airline>/<Time>') 

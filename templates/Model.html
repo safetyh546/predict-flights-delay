@@ -44,7 +44,7 @@
  
       <div class="container">
       <div class="row"> 
-                <div class="col-md-10">
+        <div class="col-md-10">
                   <!-- <aside class="filters"> -->
                     <div class="panel panel-default">
                       <div class="panel-heading">Enter Model inputs</div>
@@ -60,28 +60,49 @@
                   </li>
 
                   <li class="filter list-group-item">
-                    <label for="Origin Airport">Enter the 3 character Airport Code</label>
+                    <label for="Origin Airport">Enter the 3 character Departure Airport Code</label>
                     <input class="form-control" id="OriginAirport" type="text" placeholder="ATL">
                   </li>     
                   
                   <li class="filter list-group-item">
-                    <label for="Destination Airport">Enter the 3 character Airport Code</label>
+                    <label for="Destination Airport">Enter the 3 character Destination Airport Code</label>
                     <input class="form-control" id="DestinationAirport" type="text" placeholder="SFO">
                   </li> 
 
                 </ul>
               </div>
-              <button  id="filter-btn" type="button" class="btn btn-default">Submit</button>
+              <button  id="filter-btn" type="button" class="btn  btn-success">Submit</button>
             </form>
+
+            <div class="col-md-8">
+              <h2 class="text-left ">Prediction Results:</h2>
+              <div id="table-area" class="">
+                <table id="PredictionResultsTable" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="table-head  text-left">Airline</th>
+                      <th class="table-head  text-left">Departure Airport</th>
+                      <th class="table-head  text-left">Destination Airport</th>
+                      <th class="table-head  text-left">Delay Prediction</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+
           </div>
         </div>
 
       </div>
     </div>
+
+
+
   </div>
     
  
-
 </body>
 
 
@@ -93,7 +114,7 @@
     </footer>
   </div>
   <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="../static/js/Model1.js"></script>
+  <script src="../static/js/Model3.js"></script>
 
 
 

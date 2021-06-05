@@ -30,6 +30,7 @@ d3.json("AirlineDropDown").then((data) =>{
 
 
 var button = d3.select("#filter-btn");
+var tbody = d3.select("tbody");
 
 button.on("click", runEnter);
 
@@ -53,10 +54,26 @@ function runEnter() {
   console.log('OriginAirport selected in form='+inputValueOriginAirport)
   console.log('DestAirport selected in form='+inputValueDestinationAirport)
 
-  var Route = inputValueAirline+"/"+inputValueOriginAirport+"/"+inputValueDestinationAirport
-  console.log('Route='+Route)
+  var Route = "/Predict/"+inputValueAirline+"/"+inputValueOriginAirport+"/"+inputValueDestinationAirport
+  console.log('Route Test='+Route)
 
-  
+
+  d3.json(Route).then((importedData) => {
+    console.log(importedData)
+
+    importedData.forEach(function (importedData) {
+      console.log(importedData);
+      var row = tbody.append("tr");
+      Object.entries(importedData).forEach(function ([key, value]) {
+        var cell = row.append("td");
+        cell.text(value);
+      });
+    });
+
+  });
+
+
+
 
 
 }
